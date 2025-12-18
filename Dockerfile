@@ -26,6 +26,9 @@ COPY . .
 # Install spotdl requirements
 RUN uv sync
 
+# use latest ytdlp
+RUN pip install -U yt-dlp
+
 # Create a volume for the output directory
 VOLUME /music
 
